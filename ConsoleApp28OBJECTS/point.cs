@@ -11,7 +11,7 @@ namespace ConsoleApp28OBJECTS
 {
     public class Point
     {
-        private int x; private int y; private string name; private static char currentLetter = 'A'; private double r; private Point center; private ConsoleColor color = ConsoleColor.Black;
+        protected int x; protected int y; private string name; private static char currentLetter = 'A'; private double r; private Point center; private ConsoleColor color = ConsoleColor.Black;
 
         public Point(int xCoor, int yCoor, string name)
         {
