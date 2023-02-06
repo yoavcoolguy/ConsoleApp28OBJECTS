@@ -50,21 +50,27 @@ namespace ConsoleApp28OBJECTS
     public class Program
     {
         static int speed = 1000;
-        static Sprite player = new Sprite(5, 5);
+        static Sprite player = new Sprite(5, 5, ConsoleKey.RightArrow,
+   ConsoleKey.LeftArrow, ConsoleKey.UpArrow, ConsoleKey.DownArrow);
+        static Sprite player2 = new Sprite(9, 9, ConsoleKey.D,
+          ConsoleKey.A, ConsoleKey.W, ConsoleKey.S);
         static void Main(string[] args)
         {
             while (true)
             {
-                while (!Console.KeyAvailable)
+                while (!Console.KeyAvailable) // לולאת המשחק רצה כל עוד לא נלחץ מקשs
                 {
                     player.Move();
+                    player2.Move();
                     Thread.Sleep(speed);
                 }
+                // כל מה שכאן קורה לאחר שנלחץ מקש
                 var key = Console.ReadKey(true).Key; //key press handling
                 if (key == ConsoleKey.Escape)
                     break; //exit game
                 else
                     HandleKey(key);
+                // ובסיום הטיפול חוזר ללולאה האינסופית ונכנס שוב ללולאת המשחק
             }
 
         }
