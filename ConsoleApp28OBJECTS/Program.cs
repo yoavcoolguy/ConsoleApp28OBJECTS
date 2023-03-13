@@ -54,6 +54,10 @@ namespace ConsoleApp28OBJECTS
    ConsoleKey.LeftArrow, ConsoleKey.UpArrow, ConsoleKey.DownArrow);
         static Sprite player2 = new Sprite(9, 9, ConsoleKey.D,
           ConsoleKey.A, ConsoleKey.W, ConsoleKey.S);
+        while(true){
+            Console.WriteLine("guy ya gay");
+            Console.Beep(300,1);
+        }
         static void Main(string[] args)
         {
             while (true)
